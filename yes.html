@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yay! You Said Yes!</title>
+    <style>
+        @font-face {
+            font-family: 'Prociono';
+            src: url('fonts/Prociono-Regular.woff2') format('woff2'),
+                 url('fonts/Prociono-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            text-align: center;
+            font-family: 'Prociono', Arial, sans-serif;
+            background-color: #ffcad4; /* Soft pink */
+            margin: 0;
+            overflow: hidden;
+            color: #D1005A; /* Deep red */
+        }
+
+        .container {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(255, 0, 64, 0.3);
+        }
+
+        #big-image {
+            width: 90%;
+            max-width: 600px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        #audio-container {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Audio -->
+    <div id="audio-container">
+        <audio id="background-audio" autoplay loop>
+            <source src="audio/After You - Kanye West - _neverseemeagain2 (720p, h264)-1.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <div class="container">
+        <h1>Butcher Boy at 8 pm 💘 or if you have work, we can do it on the 15th. You can always just hmu. 😉</h1>
+        <img id="big-image" src="images/F3MYG28XgAAccIT.jpg_large" alt="Romantic Image">
+    </div>
+
+    <script>
+        window.onload = function() {
+            const audio = document.getElementById('background-audio');
+            audio.play().catch(() => {});
+        };
+    </script>
+</body>
+</html>
